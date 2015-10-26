@@ -1,8 +1,8 @@
-package com.ryg.slideview;
+package com.pass.self;
 
 import java.util.List;
 
-import com.ryg.slideview.data.DataUtil;
+import com.pass.self.slideview.data.DataUtil;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,10 +10,13 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
 
+/**
+ * ScrollView 内listview全部展开
+ * @author leker
+ *
+ */
 public class ScrollViewListViewActivity extends Activity {
 	String TAG = this.getClass().getName();
 

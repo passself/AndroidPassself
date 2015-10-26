@@ -1,9 +1,11 @@
-package com.ryg.slideview;
+package com.pass.self;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ryg.slideview.SlideView.OnSlideListener;
+import com.pass.self.slideview.ListViewCompat;
+import com.pass.self.slideview.SlideView;
+import com.pass.self.slideview.SlideView.OnSlideListener;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -18,6 +20,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * 
+ * @author leker
+ * ListView滑动删除
+ */
 public class MainActivity extends Activity implements OnItemClickListener, OnClickListener,
         OnSlideListener {
 

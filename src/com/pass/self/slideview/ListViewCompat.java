@@ -1,6 +1,6 @@
-package com.ryg.slideview;
+package com.pass.self.slideview;
 
-import com.ryg.slideview.MainActivity.MessageItem;
+import com.pass.self.MainActivity.MessageItem;
 
 import android.content.Context;
 import android.util.AttributeSet;

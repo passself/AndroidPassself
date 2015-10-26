@@ -1,4 +1,4 @@
-package com.ryg.slideview.data;
+package com.pass.self.slideview.data;
 
 import java.util.ArrayList;
 import java.util.List;

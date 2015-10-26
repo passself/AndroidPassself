@@ -1,4 +1,4 @@
-package com.ryg.slideview.widget;
+package com.pass.self.slideview.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;

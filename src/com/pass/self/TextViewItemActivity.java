@@ -1,4 +1,5 @@
-package com.ryg.slideview;
+package com.pass.self;
+
 
 import android.app.Activity;
 import android.graphics.Paint;

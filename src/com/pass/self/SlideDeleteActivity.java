@@ -1,4 +1,4 @@
-package com.ryg.slideview;
+package com.pass.self;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,10 +11,15 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
-import com.ryg.slideview.widget.SlideCutListView;
-import com.ryg.slideview.widget.SlideCutListView.RemoveDirection;
-import com.ryg.slideview.widget.SlideCutListView.RemoveListener;
+import com.pass.self.slideview.widget.SlideCutListView;
+import com.pass.self.slideview.widget.SlideCutListView.RemoveDirection;
+import com.pass.self.slideview.widget.SlideCutListView.RemoveListener;
 
+/**
+ * ListView滑动删除
+ * @author leker
+ *
+ */
 public class SlideDeleteActivity extends Activity implements RemoveListener{
 	
 	private SlideCutListView slideCutListView ;  
