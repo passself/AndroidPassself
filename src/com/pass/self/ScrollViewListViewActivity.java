@@ -68,4 +68,5 @@ public class ScrollViewListViewActivity extends Activity {
 				+ (listView.getDividerHeight() * (listView.getCount() - 1));
 		listView.setLayoutParams(params);
 	}
+	
 }
