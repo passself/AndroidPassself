@@ -5,7 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -32,6 +36,17 @@ public class AdapterActivity extends Activity {
 				// TODO Auto-generated method stub
 				TextView view = helper.getView(R.id.id_tv_title);  
                 view.setText(item); 
+			}
+		});
+		
+		mListView.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(getApplicationContext(), SwipeActivity.class);
+				startActivity(intent);
 			}
 		});
 	}
