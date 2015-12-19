@@ -4,5 +4,8 @@
     <string name="app_name">SlideView</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
+	
+    
+    <string name="addQR">addQR</string>
+    <string name="str_isadd_logo">是否添加logo</string>
 </resources>
