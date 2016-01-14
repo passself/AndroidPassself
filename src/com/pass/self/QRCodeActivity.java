@@ -73,13 +73,13 @@ public class QRCodeActivity extends Activity implements OnClickListener{
                     runOnUiThread(new Runnable() {  
                         @Override  
                         public void run() {  
-                        	//qrImageView.setImageBitmap(BitmapFactory.decodeFile(filePath));  
-                        	try {
+                        	qrImageView.setImageBitmap(BitmapFactory.decodeFile(filePath));  
+                        	/*try {
 								qrImageView.setImageBitmap(QRCodeUtil.createCode(editText.getText().toString(), logo, BarcodeFormat.QR_CODE));
 							} catch (WriterException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
-							}
+							}*/
                         }  
                     });  
                 }  

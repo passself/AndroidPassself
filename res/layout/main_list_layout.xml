@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<Button
+	    android:id="@+id/list_btn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="testDialog" />
+	
+	<EditText
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	     />
+	
+	<com.pass.self.utils.IpEditText
+	    android:id="@+id/ip_edit_text"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:textSize="24sp"
+	    android:hint="192.168.1.1" />
+	
+	<ProgressBar
+	    android:layout_width="20dp"
+	    android:layout_height="22dp"
+	    android:indeterminateDrawable="@drawable/progressbar_loading"
+	    android:indeterminateOnly="true"
+	    android:indeterminateBehavior="repeat" />
+	
+	<LinearLayout
+	    android:id="@+id/index_header_sync_lay"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:gravity="center" >
+		<ProgressBar
+	        android:id="@+id/index_header_sync_progressBar"
+	        android:layout_width="20dp"
+	        android:layout_height="22dp"
+	        android:layout_gravity="center"
+	        android:indeterminateBehavior="cycle"
+	        android:indeterminateOnly="true"
+	        android:indeterminateDrawable="@drawable/synchronization_data"
+	        android:indeterminate="false" />
+		
+		<ImageView
+		    android:id="@+id/index_header_sync_succes_img"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/synchronization_data_success" />
+		
+		<TextView
+		    android:id="@+id/index_header_sync_status"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="18sp"
+		    android:textColor="#FF3F4046"
+		    android:text="正在同步..." />
+	</LinearLayout>
+</LinearLayout>
