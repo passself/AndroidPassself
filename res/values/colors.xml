@@ -293,5 +293,10 @@
     <!-- 海军色 -->
     <color name="black">#000000</color>
     <!-- 黑色 -->
-
+	<color name="kprogresshud_default_color">#b1000000</color>
+    <color name="kprogresshud_grey_color">#449E9E9E</color>
+    
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
 </resources>

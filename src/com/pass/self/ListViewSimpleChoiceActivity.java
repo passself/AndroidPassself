@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,11 +15,15 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -26,6 +31,7 @@ import android.widget.Toast;
 
 import com.pass.self.bean.Brand;
 import com.pass.self.utils.IpEditText;
+import com.pass.self.utils.PlayUtils;
 
 public class ListViewSimpleChoiceActivity extends Activity implements OnClickListener{
 	
@@ -40,6 +46,7 @@ public class ListViewSimpleChoiceActivity extends Activity implements OnClickLis
     IpEditText ipEditText;
     ProgressBar head_progressBar;
     
+    LinearLayout index_header_sync_lay;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -76,6 +83,41 @@ public class ListViewSimpleChoiceActivity extends Activity implements OnClickLis
 		dialog.show();
 	}
 	
+	private void showAnimation(View view){
+		AnimationSet animationSet = new AnimationSet(true);
+		
+		/*Animation alphaAnimation0 = new AlphaAnimation(1.0f, 0.1f);  
+		//设置动画时间
+		alphaAnimation0.setDuration(3000);  
+		view.startAnimation(alphaAnimation0);  
+		
+		Animation alphaAnimation = new AlphaAnimation(0.1f, 1.0f);  
+		//设置动画时间
+		alphaAnimation.setDuration(3000);  
+		view.startAnimation(alphaAnimation);  
+		alphaAnimation.setFillAfter(true);*/
+		
+		/*animationSet.addAnimation(alphaAnimation0);
+		animationSet.addAnimation(alphaAnimation);
+		animationSet.start();*/
+		
+		Animation scaleAnimation0 = new ScaleAnimation(1.0f, 0.1f,1.0f,0.1f);  
+		scaleAnimation0.setDuration(1500*3);  
+//	    view.startAnimation(scaleAnimation0);
+//	    scaleAnimation0.setFillAfter(true);
+		
+	    //初始化  
+	    Animation scaleAnimation = new ScaleAnimation(0.1f, 1.0f,0.1f,1.0f);  
+	    //设置动画时间  
+	    scaleAnimation.setDuration(1500*3);  
+//	    view.startAnimation(scaleAnimation);  
+//	    scaleAnimation.setFillAfter(true);
+	    animationSet.addAnimation(scaleAnimation);
+	    animationSet.addAnimation(scaleAnimation0);
+	    
+	    view.startAnimation(animationSet);
+	}
+	
 	
 	private void initView(){
 		list_btn = (Button)findViewById(R.id.list_btn);
@@ -84,6 +126,7 @@ public class ListViewSimpleChoiceActivity extends Activity implements OnClickLis
 		
 		head_progressBar = (ProgressBar)findViewById(R.id.index_header_sync_progressBar);
 		head_progressBar.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.progress_loading_anim));
+		index_header_sync_lay = (LinearLayout)findViewById(R.id.index_header_sync_lay);
     }
 
     private void initDatas(){
@@ -169,6 +212,9 @@ public class ListViewSimpleChoiceActivity extends Activity implements OnClickLis
 			String ip = ipEditText.getText().toString().trim();
 			Toast.makeText(mContext, ipEditText.checkIP(ip) ? "IP地址合法":"IP地址不合法", 1).show();
 			//showDialog();
+			showAnimation(index_header_sync_lay);
+			
+			PlayUtils.getInstance(mContext).playRing(PlayUtils.CHANGE_FINGER);
 		}
 	}
 }
